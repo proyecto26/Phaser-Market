@@ -10,6 +10,7 @@ var app = express();
 
 cons.requires.nunjucks = nunjucks.configure('views', {
   autoescape: true,
+  watch: true, //DEV
   express   : app
 });
 

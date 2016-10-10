@@ -1,5 +1,24 @@
 {% extends "layout.html" %}
 
 {% block body %}
-<h1>Hola {{ title }}</h1>
+    <br/>
+    <br/>
+    <hgroup class="center-align">
+        <h1>Discover &amp; share phaser <span id="typey">plugins</span> for your games</h1>
+        <h6>Find all the best community-made resources you need to jumpstart your phaser game development.</h6>
+    </hgroup>
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript">
+    $(function(){
+        $("#typey").typed({
+            strings: ["plugins", "extensions", "themes"],
+            typeSpeed: 150,
+            backSpeed:15,
+            backDelay:1000,
+            loop:true
+        });
+    });
+</script>
 {% endblock %}

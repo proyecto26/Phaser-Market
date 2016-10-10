@@ -1,8 +1,82 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+/*body{
+  background: url(/images/bg-body.jpg) no-repeat 50% 0;
+  background-size: 100% auto;
+}*/
+
+.brand-logo{
+  background: url(/images/phaser.png) no-repeat -188px 20px;
+  width: 145px;
+  height: 65px;
+  margin-left: 5px;
 }
 
-a {
-  color: #00B7FF;
+nav{
+  height: 88px;
+  background: white !important;
+}
+
+nav .right{
+  position: absolute;
+  right: 0;
+}
+
+#nav-mobile{
+  padding-left: 170px;
+}
+
+nav ul a{
+  font-size: 17px;
+  color: #9faac0;
+}
+
+hgroup h1{
+  font-size: 48px
+}
+
+hgroup h6{
+  color: #aab3c1;
+  font-size: 18px;
+}
+
+#typey {
+    color: #3782fe;
+    font-weight: 400;
+}
+
+.typed-cursor {
+    opacity: 1;
+    color: #3782fe;
+    -webkit-animation: blink .7s infinite;
+    -moz-animation: blink .7s infinite;
+    animation: blink .7s infinite;
+}
+
+@keyframes blink {
+    0%,100% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes blink {
+    0%,100% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 0
+    }
+}
+
+@-moz-keyframes blink {
+    0%,100% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 0
+    }
 }

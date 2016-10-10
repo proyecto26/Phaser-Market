@@ -1,24 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Phaser Market</title>
     <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="description" content="Plugins, extensions, themes, and resources for your Phaser games">
+    <meta name="keywords" content="html5,javascript,mobile,phaser,phaser,games,canvas,market,2d,pixijs,pixi">
+    <meta name="author" content="Phaser Framework and Juan David Nicholls">
+    <meta property="og:image" content="http://phaser.io/images/img.png">
+    <title>Phaser Market</title>
+
+    <!-- Open Graph - Facebook -->
+    <meta property="og:site_name" content="Phaser Marketplace">
+    <meta property="og:title" content="Home">
+    <meta property="article:publisher" content="http://phaser.io">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Fallback to homescreen for Chrome <39 on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Phaser Marketplace">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Phaser Marketplace">
+    <link rel="apple-touch-icon" href="http://phaser.io/images/img.png">
+    
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-    
+    <link href="/stylesheets/style.css" rel="stylesheet">
+    {% block styles %}{% endblock %}
 </head>
 <body>
+    <nav>
+        <div class="container nav-wrapper valign-wrapper">
+            <a href="#" class="brand-logo left"></a>
+            <ul id="nav-mobile" class="left hide-on-small-and-down">
+                <li><a class="waves-effect waves-light" href="/plugins">plugins</a></li>
+                <li><a class="waves-effect waves-light" href="/extensions">extensions</a></li>
+                <li><a class="waves-effect waves-light" href="/themes">themes</a></li>
+            </ul>
+            <ul class="right hide-on-small-and-down">
+                <!--<li><a class="waves-effect waves-light" href="/plugins">plugins</a></li>-->
+                <li><a class="waves-effect waves-light btn">submit</a></li>
+            </ul>
+            <a href="#" data-activates="mobile-demo" class="button-collapse hide-on-med-and-up right"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
     <div class="container">
-        {% block body %}
-            This is the default content
-        {% endblock %}
+        {% block body %} This is the default content {% endblock %}
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js"></script>
+    {% block scripts %}{% endblock %}
 </body>
+
 </html>
