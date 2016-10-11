@@ -55,11 +55,11 @@ hgroup h6{
     animation: blink .7s infinite;
 }
 
-.featured .m8{
+.featured .m6{
     height: 275px;
 }
 
-.featured .m8 iframe{
+.featured .m6 iframe{
     width: 100%;
     height: 100%;
     border: none;
