@@ -12,7 +12,7 @@
 
 nav{
   height: 88px;
-  background: white !important;
+  background: rgba(255,255,255,.98);
 }
 
 nav .right{
@@ -33,13 +33,42 @@ nav ul a{
   color: #9faac0;
 }
 
+hgroup{
+    position:relative;
+    height: 160px;
+}
+
 hgroup h1{
-  font-size: 48px
+    font-size: 48px;
+    letter-spacing: -.04em;
 }
 
 hgroup h6{
-  color: #aab3c1;
-  font-size: 18px;
+    color: #aab3c1;
+    font-size: 18px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+    right: 0;
+}
+
+@media only screen and (min-width: 468px) and (max-width: 700px) {
+    hgroup{
+        height: 240px;
+    }
+}
+
+@media only screen and (min-width: 370px) and (max-width: 467px) {
+    hgroup{
+        height: 285px;
+    }
+}
+
+@media only screen and (max-width: 369px) {
+    hgroup{
+        height: 415px;
+    }
 }
 
 #typey {
@@ -55,11 +84,11 @@ hgroup h6{
     animation: blink .7s infinite;
 }
 
-.featured .m6{
-    height: 275px;
+.featured .m12{
+    height: 350px;
 }
 
-.featured .m6 iframe{
+.featured .m12 iframe{
     width: 100%;
     height: 100%;
     border: none;

@@ -27,43 +27,48 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Phaser Marketplace">
     <link rel="apple-touch-icon" href="http://phaser.io/images/img.png">
-    
+
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-    <link href="/stylesheets/style.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet"> 
     {% block styles %}{% endblock %}
 </head>
+
 <body>
-    <nav>
-        <div class="container nav-wrapper valign-wrapper">
-            <a href="#" class="brand-logo left"></a>
-            <ul id="nav-mobile" class="left hide-on-small-and-down">
-                <li><a class="waves-effect waves-purple white" href="#">plugins</a></li>
-                <li><a class="waves-effect waves-purple white" href="#">extensions</a></li>
-                <li><a class="waves-effect waves-purple white" href="#">templates</a></li>
-            </ul>
-            <ul class="right hide-on-small-and-down">
-                <!--<li><a class="waves-effect waves-purple" href="#">plugins</a></li>-->
-                <li><a class="waves-effect waves-purple btn">submit</a></li>
-            </ul>
-            <a href="#" data-activates="mobile-demo" class="button-collapse hide-on-med-and-up right"><i class="material-icons">menu</i></a>
-            <ul class="side-nav" id="mobile-demo">
-                <li class="container"><h2 class="purple-text text-darken-4">Menu</h2></li>
-                <li><a class="waves-effect waves-purple white" href="#">plugins</a></li>
-                <li><a class="waves-effect waves-purple white" href="#">extensions</a></li>
-                <li><a class="waves-effect waves-purple white" href="#">templates</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="container nav-wrapper valign-wrapper">
+                <a href="#" class="brand-logo left"></a>
+                <ul id="nav-mobile" class="left hide-on-small-and-down">
+                    <li><a class="waves-effect waves-purple white" href="#">plugins</a></li>
+                    <li><a class="waves-effect waves-purple white" href="#">extensions</a></li>
+                    <li><a class="waves-effect waves-purple white" href="#">templates</a></li>
+                </ul>
+                <ul class="right hide-on-small-and-down">
+                    <!--<li><a class="waves-effect waves-purple" href="#">plugins</a></li>-->
+                    <li><a class="waves-effect waves-purple btn">submit</a></li>
+                </ul>
+                <a href="#" data-activates="mobile-demo" class="button-collapse hide-on-med-and-up right"><i class="material-icons">menu</i></a>
+                <ul class="side-nav" id="mobile-demo">
+                    <li class="container">
+                        <h2 class="purple-text text-darken-4">Menu</h2>
+                    </li>
+                    <li><a class="waves-effect waves-purple white" href="#">plugins</a></li>
+                    <li><a class="waves-effect waves-purple white" href="#">extensions</a></li>
+                    <li><a class="waves-effect waves-purple white" href="#">templates</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
     <div class="container">
         {% block body %} This is the default content {% endblock %}
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js"></script> 
     {% block scripts %}{% endblock %}
     <script>
         $('.button-collapse').sideNav({
@@ -73,4 +78,5 @@
         });
     </script>
 </body>
+
 </html>
