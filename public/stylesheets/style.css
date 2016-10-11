@@ -24,6 +24,10 @@ nav .right{
   padding-left: 170px;
 }
 
+.button-collapse{
+    color: black;
+}
+
 nav ul a{
   font-size: 17px;
   color: #9faac0;
@@ -49,6 +53,16 @@ hgroup h6{
     -webkit-animation: blink .7s infinite;
     -moz-animation: blink .7s infinite;
     animation: blink .7s infinite;
+}
+
+.featured .m8{
+    height: 275px;
+}
+
+.featured .m8 iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 @keyframes blink {

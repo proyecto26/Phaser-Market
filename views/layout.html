@@ -6,8 +6,8 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/favicon.ico">
-    <meta name="description" content="Plugins, extensions, themes, and resources for your Phaser games">
-    <meta name="keywords" content="html5,javascript,mobile,phaser,phaser,games,canvas,market,2d,pixijs,pixi">
+    <meta name="description" content="Plugins, extensions, templates, and resources for your Phaser games">
+    <meta name="keywords" content="html5,javascript,mobile,phaser,phaser,games,canvas,market,2d,pixijs,pixi,plugins,extensions,templates">
     <meta name="author" content="Phaser Framework and Juan David Nicholls">
     <meta property="og:image" content="http://phaser.io/images/img.png">
     <title>Phaser Market</title>
@@ -40,15 +40,21 @@
         <div class="container nav-wrapper valign-wrapper">
             <a href="#" class="brand-logo left"></a>
             <ul id="nav-mobile" class="left hide-on-small-and-down">
-                <li><a class="waves-effect waves-light" href="/plugins">plugins</a></li>
-                <li><a class="waves-effect waves-light" href="/extensions">extensions</a></li>
-                <li><a class="waves-effect waves-light" href="/themes">themes</a></li>
+                <li><a class="waves-effect waves-purple white" href="#">plugins</a></li>
+                <li><a class="waves-effect waves-purple white" href="#">extensions</a></li>
+                <li><a class="waves-effect waves-purple white" href="#">templates</a></li>
             </ul>
             <ul class="right hide-on-small-and-down">
-                <!--<li><a class="waves-effect waves-light" href="/plugins">plugins</a></li>-->
-                <li><a class="waves-effect waves-light btn">submit</a></li>
+                <!--<li><a class="waves-effect waves-purple" href="#">plugins</a></li>-->
+                <li><a class="waves-effect waves-purple btn">submit</a></li>
             </ul>
             <a href="#" data-activates="mobile-demo" class="button-collapse hide-on-med-and-up right"><i class="material-icons">menu</i></a>
+            <ul class="side-nav" id="mobile-demo">
+                <li class="container"><h2 class="purple-text text-darken-4">Menu</h2></li>
+                <li><a class="waves-effect waves-purple white" href="#">plugins</a></li>
+                <li><a class="waves-effect waves-purple white" href="#">extensions</a></li>
+                <li><a class="waves-effect waves-purple white" href="#">templates</a></li>
+            </ul>
         </div>
     </nav>
     <div class="container">
@@ -59,6 +65,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js"></script>
     {% block scripts %}{% endblock %}
+    <script>
+        $('.button-collapse').sideNav({
+            //menuWidth: 300, // Default is 240
+            edge: 'right', // Choose the horizontal origin
+            closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        });
+    </script>
 </body>
-
 </html>
