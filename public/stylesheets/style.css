@@ -10,11 +10,6 @@
   margin-left: 5px;
 }
 
-nav{
-  height: 88px;
-  background: rgba(255,255,255,.98);
-}
-
 nav .right{
   position: absolute;
   right: 0;
@@ -51,6 +46,36 @@ hgroup h6{
     left: 0;
     bottom: 15px;
     right: 0;
+}
+
+.navbar-fixed, nav{
+    height: 88px !important;
+    background: rgba(255,255,255,.94);
+}
+
+.container .section.row{
+    margin: 0;
+    padding-bottom: 0;
+}
+
+#container{
+    margin-top: 40px;
+}
+
+.addons .col{
+    padding: 0;
+}
+
+.addons .card-image{
+    margin: 15px;
+}
+
+.addons .card{
+    box-shadow: none;
+}
+
+.container .section .col{
+    padding: 0;
 }
 
 @media only screen and (max-width: 741px) {

@@ -1,0 +1,39 @@
+{% extends "layout.html" %} {% block body %}
+
+<div class="section row">
+    <div class="col">
+        <img src="images/plugin.png" alt="" class="circle responsive-img">
+    </div>
+    <div class="col">
+        <h5>{{ title }}</h5>
+        <p>Stuff</p>
+    </div>
+</div>
+<div class="divider"></div>
+
+<div class="row addons">
+    {% for addon in addons %}
+    <div class="col s12 m6 l3">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="images/icon.png">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">
+                    {{ addon.name }}
+                </span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="col s12">
+        <div class="center-align section">
+            <span class="flow-text">We need to create more {{ title }}!</span>
+        </div>
+        <div class="divider"></div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

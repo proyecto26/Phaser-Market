@@ -40,35 +40,36 @@
     <div class="navbar-fixed">
         <nav>
             <div class="container nav-wrapper valign-wrapper">
-                <a href="#" class="brand-logo left"></a>
+                <a href="/" class="brand-logo left"></a>
                 <ul id="nav-mobile" class="left hide-on-small-and-down">
-                    <li><a class="waves-effect waves-purple white" href="#">plugins</a></li>
-                    <li><a class="waves-effect waves-purple white" href="#">extensions</a></li>
-                    <li><a class="waves-effect waves-purple white" href="#">templates</a></li>
+                    <li><a class="waves-effect waves-purple white" href="/plugins">plugins</a></li>
+                    <li><a class="waves-effect waves-purple white" href="/extensions">extensions</a></li>
+                    <li><a class="waves-effect waves-purple white" href="/templates">templates</a></li>
                 </ul>
                 <ul class="right hide-on-small-and-down">
                     <!--<li><a class="waves-effect waves-purple" href="#">plugins</a></li>-->
                     <li><a class="waves-effect waves-purple btn">submit</a></li>
                 </ul>
-                <a href="#" data-activates="mobile-demo" class="button-collapse hide-on-med-and-up right"><i class="material-icons">menu</i></a>
+                <a href="javascript:void(0)" data-activates="mobile-demo" class="button-collapse hide-on-med-and-up right"><i class="material-icons">menu</i></a>
                 <ul class="side-nav" id="mobile-demo">
                     <li class="container">
                         <h2 class="purple-text text-darken-4">Menu</h2>
                     </li>
-                    <li><a class="waves-effect waves-purple white" href="#">plugins</a></li>
-                    <li><a class="waves-effect waves-purple white" href="#">extensions</a></li>
-                    <li><a class="waves-effect waves-purple white" href="#">templates</a></li>
+                    <li><a class="waves-effect waves-purple white" href="/plugins">plugins</a></li>
+                    <li><a class="waves-effect waves-purple white" href="/extensions">extensions</a></li>
+                    <li><a class="waves-effect waves-purple white" href="/templates">templates</a></li>
                 </ul>
             </div>
         </nav>
     </div>
-    <div class="container">
+    <div id="container" class="container">
         {% block body %} This is the default content {% endblock %}
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.4.6/bluebird.min.js"></script>
     {% block scripts %}{% endblock %}
     <script>
         $('.button-collapse').sideNav({
