@@ -32,7 +32,10 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-    <link href="/stylesheets/style.css" rel="stylesheet"> 
+    <link href="/stylesheets/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/multilevelmenu.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/component.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/animations.css" />
     {% block styles %}{% endblock %}
 </head>
 
@@ -62,8 +65,10 @@
             </div>
         </nav>
     </div>
-    <div id="container" class="container">
-        {% block body %} This is the default content {% endblock %}
+    <div class="pt-perspective">
+        <div id="container" class="container pt-page pt-page-current pt-page-rotateSlideIn">
+            {% block body %} This is the default content {% endblock %}
+        </div>
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <!-- Compiled and minified JavaScript -->
@@ -72,10 +77,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.4.6/bluebird.min.js"></script>
     {% block scripts %}{% endblock %}
     <script>
-        $('.button-collapse').sideNav({
-            //menuWidth: 300, // Default is 240
-            edge: 'right', // Choose the horizontal origin
-            closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        $(function(){
+
+            var outClass = 'pt-page-rotateSlideOut',
+				inClass = 'pt-page-rotateSlideIn';
+            var $container = $("#container");
+            $("a[href!='/']").on('click', function(){
+                var newLocation = this.href;
+                $container.removeClass(inClass).addClass(outClass);
+                setTimeout(function(){
+                    window.location = newLocation;
+                }, 600);
+                return false;
+            });
+
+            $('.button-collapse').sideNav({
+                //menuWidth: 300, // Default is 240
+                edge: 'right', // Choose the horizontal origin
+                closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+            });
         });
     </script>
 </body>
