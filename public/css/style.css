@@ -1,10 +1,5 @@
-/*body{
-  background: url(/images/bg-body.jpg) no-repeat 50% 0;
-  background-size: 100% auto;
-}*/
-
 .brand-logo{
-  background: url(/images/phaser.png) no-repeat -188px 20px;
+  background: url(/img/phaser.png) no-repeat -188px 20px;
   width: 145px;
   height: 65px;
   margin-left: 5px;

@@ -11,7 +11,7 @@ html, body { height: 100%; }
 }
 
 .pt-page {
-	width: 100%;
+	/*width: 100%;*/
 	background: white;
 	/*height: 100%;*/
 	position: absolute;

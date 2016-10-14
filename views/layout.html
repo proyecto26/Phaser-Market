@@ -32,10 +32,10 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-    <link href="/stylesheets/style.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/multilevelmenu.css" />
-    <link rel="stylesheet" type="text/css" href="/stylesheets/component.css" />
-    <link rel="stylesheet" type="text/css" href="/stylesheets/animations.css" />
+    <link href="/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/multilevelmenu.css" />
+    <link rel="stylesheet" type="text/css" href="/css/component.css" />
+    <link rel="stylesheet" type="text/css" href="/css/animations.css" />
     {% block styles %}{% endblock %}
 </head>
 
@@ -76,30 +76,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.4/typed.min.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.4.6/bluebird.min.js"></script>
     {% block scripts %}{% endblock %}
-    <script>
-        $(function(){
-
-            var outClass = 'pt-page-rotateSlideOut',
-				inClass = 'pt-page-rotateSlideIn';
-            var $container = $("#container");
-            $("a[href!='/']").on('click', function(){
-                var newLocation = this.href;
-                if(newLocation !== "javascript:void(0)"){
-                    $container.removeClass(inClass).addClass(outClass);
-                    setTimeout(function(){
-                        window.location = newLocation;
-                    }, 600);
-                }
-                return false;
-            });
-
-            $('.button-collapse').sideNav({
-                //menuWidth: 300, // Default is 240
-                edge: 'right', // Choose the horizontal origin
-                closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-            });
-        });
-    </script>
+    <script src="/js/app.js"></script>
 </body>
 
 </html>

@@ -17,6 +17,9 @@ cons.requires.nunjucks = nunjucks.configure('views', {
 // routes
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var plugins = require('./routes/plugins');
+var extensions = require('./routes/extensions');
+var templates = require('./routes/templates');
 
 // view engine setup
 app.engine('html', cons.nunjucks);
@@ -33,6 +36,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/plugins', plugins);
+app.use('/extensions', extensions);
+app.use('/templates', templates);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,8 +1,10 @@
-{% extends "layout.html" %} {% block body %}
+{% extends "layout.html" %} 
+
+{% block body %}
 
 <div class="section row">
     <div class="col">
-        <img src="images/plugin.png" alt="" class="circle responsive-img">
+        <img src="img/plugin.png" alt="" class="circle responsive-img">
     </div>
     <div class="col">
         <h5>{{ title }}</h5>
@@ -14,9 +16,9 @@
 <div class="row addons">
     {% for addon in addons %}
     <div class="col s12 m6 l3">
-        <div class="card">
+        <a class="card" href="plugins/{{addon.name}}">
             <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="images/icon.png">
+                <img class="activator" src="img/icon.png">
             </div>
             <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">
@@ -24,7 +26,7 @@
                 </span>
                 <p>Here is some more information about this product that is only revealed once clicked on.</p>
             </div>
-        </div>
+        </a>
     </div>
     {% else %}
     <div class="col s12">
