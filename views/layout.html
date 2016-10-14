@@ -84,10 +84,12 @@
             var $container = $("#container");
             $("a[href!='/']").on('click', function(){
                 var newLocation = this.href;
-                $container.removeClass(inClass).addClass(outClass);
-                setTimeout(function(){
-                    window.location = newLocation;
-                }, 600);
+                if(newLocation !== "javascript:void(0)"){
+                    $container.removeClass(inClass).addClass(outClass);
+                    setTimeout(function(){
+                        window.location = newLocation;
+                    }, 600);
+                }
                 return false;
             });
 
