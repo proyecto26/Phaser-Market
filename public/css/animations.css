@@ -718,6 +718,15 @@
 	animation: rotateSlideIn 1s both ease;
 }
 
+.pt-page-rotateSlideRightOut {
+	-webkit-animation: rotateSlideRightOut 1s both ease;
+	animation: rotateSlideRightOut 1s both ease;
+}
+.pt-page-rotateSlideRightIn {
+	-webkit-animation: rotateSlideRightIn 1s both ease;
+	animation: rotateSlideRightIn 1s both ease;
+}
+
 /********************************* keyframes **************************************/
 
 /* rotate sides first and scale */
@@ -1257,6 +1266,30 @@
 }
 @keyframes rotateSlideIn {
 	0%, 25% { opacity: .5; -webkit-transform: translateZ(-500px) translateX(200%); transform: translateZ(-500px) translateX(200%); }
+	75% { opacity: .5; -webkit-transform: translateZ(-500px); transform: translateZ(-500px); }
+	100% { opacity: 1; -webkit-transform: translateZ(0) translateX(0); transform: translateZ(0) translateX(0); }
+}
+
+@-webkit-keyframes rotateSlideRightOut {
+	0% { }
+	25% { opacity: .5; -webkit-transform: translateZ(-500px); }
+	75% { opacity: .5; -webkit-transform: translateZ(-500px) translateX(200%); }
+	100% { opacity: .5; -webkit-transform: translateZ(-500px) translateX(200%); }
+}
+@keyframes rotateSlideRightOut {
+	0% { }
+	25% { opacity: .5; -webkit-transform: translateZ(-500px); transform: translateZ(-500px); }
+	75% { opacity: .5; -webkit-transform: translateZ(-500px) translateX(200%); transform: translateZ(-500px) translateX(200%); }
+	100% { opacity: .5; -webkit-transform: translateZ(-500px) translateX(200%); transform: translateZ(-500px) translateX(200%); }
+}
+
+@-webkit-keyframes rotateSlideRightIn {
+	0%, 25% { opacity: .5; -webkit-transform: translateZ(-500px) translateX(-200%); }
+	75% { opacity: .5; -webkit-transform: translateZ(-500px); }
+	100% { opacity: 1; -webkit-transform: translateZ(0) translateX(0); }
+}
+@keyframes rotateSlideRightIn {
+	0%, 25% { opacity: .5; -webkit-transform: translateZ(-500px) translateX(-200%); transform: translateZ(-500px) translateX(-200%); }
 	75% { opacity: .5; -webkit-transform: translateZ(-500px); transform: translateZ(-500px); }
 	100% { opacity: 1; -webkit-transform: translateZ(0) translateX(0); transform: translateZ(0) translateX(0); }
 }
